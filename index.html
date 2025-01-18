@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--Code written by Chirrenthen-->
+<!--Consider Supporting me on Patreon--> <!--https://www.patreon.com/c/Chirrenthen-->
+<!--For mode details on this project, check out "https://chirrenthen13.wixsite.com/iothub"-->
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battery Tracker | Chirrenthen</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="battery.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 style="text-align: center;">Battery Tracker</h1>
+        <div class="theme-switcher">
+          <button id="theme-dark" class="theme-btn" title="Dark Mode">🌓</button>
+        </div>
+      </header>
+
+      <div class="dashboard">
+        <div class="battery-status">
+          <div id="battery-icon">
+            <div id="battery-fill"></div>
+          </div>
+          <div id="charge-level"></div>
+          <div id="charging-status"></div>
+          <div id="charging-time"></div>
+        </div>
+
+        <div class="analytics">
+          <h2>Battery Analytics</h2>
+          <canvas id="battery-chart"></canvas>
+        </div>
+      </div>
+
+      <div id="toast"></div>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

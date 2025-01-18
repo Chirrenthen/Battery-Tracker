@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* Theme Variables */
+:root {
+  --bg-color: #f0ffff;
+  --text-color: #333;
+  --accent-color: #246aed;
+}
+
+.dark-mode {
+  --bg-color: #000000;
+  --text-color: #f0f0f0;
+}
+
+.neon-mode {
+  --bg-color: #000000;
+  --text-color: rgb(15, 245, 245);
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1em;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 0.5em;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Battery Icon */
+#battery-icon {
+  width: 100px;
+  height: 50px;
+  border: 3px solid var(--text-color);
+  border-radius: 5px;
+  position: relative;
+  margin: 20px auto;
+}
+
+#battery-icon:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 20px;
+  background: var(--text-color);
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+}
+
+#battery-fill {
+  width: 0;
+  height: 100%;
+  background-color: rgb(12, 231, 228);
+  border-radius: 3px;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+#charge-level,
+#charging-status,
+#charging-time {
+  margin-top: 10px;
+}
+
+/* Chart */
+.analytics {
+  margin-top: 30px;
+}
+
+/* Toast Notifications */
+#toast {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: none;
+  animation: fade-in-out 4s;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
